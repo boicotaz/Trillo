@@ -116,11 +116,17 @@ body {
 
 .hotel-view {
   background-color: orangered;
-  flex: 1 1 0; }
+  flex: 1 1 0;
+  height: 80rem; }
 
 .content {
   display: flex;
-  background-color: blue; }
+  align-items: stretch; }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .user-nav {
   align-self: stretch;
@@ -162,3 +168,53 @@ body {
     border-radius: 50%; }
   .user-nav__user-name {
     margin-left: 1rem; }
+
+.side-nav {
+  list-style-type: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column; }
+  .side-nav__item {
+    cursor: pointer;
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+    .side-nav__item::before {
+      content: "";
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 3px;
+      height: 100%;
+      transition: transform 0.2s, width 0.2s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+      background-color: var(--color-primary);
+      transform: scaleY(0);
+      z-index: 0; }
+    .side-nav__item:active::before {
+      background-color: var(--color-primary-dark); }
+    .side-nav__item:hover:before {
+      transform: scaleY(1);
+      width: 100%; }
+  .side-nav__link {
+    text-decoration: none;
+    color: var(--color-grey-light-1);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 1; }
+  .side-nav__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 1.35rem;
+    fill: currentColor; }
+  .side-nav span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400; }
+
+.legal {
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4);
+  text-align: center; }
