@@ -1,8 +1,10 @@
 .hotel-view {
-    background-color: orangered;
+    
     flex: 1 1 0;
     // flex: 2;
     height: 80rem; //test
+
+    background-color: var(--color-grey-light-2);
 }
 
 .content {

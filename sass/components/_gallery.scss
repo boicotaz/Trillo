@@ -1,0 +1,9 @@
+.gallery{
+    display: flex;
+    &__photo {
+        width: 100%;
+        // we display block to avoid having some unnecessary space at the bottom, 
+        // if we left it as an inline block elem
+        display: block;
+    }
+}
